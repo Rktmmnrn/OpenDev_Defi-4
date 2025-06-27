@@ -8,17 +8,30 @@
 </head>
 <body>
     <div class="quiz-container">
+
     <h1>Quiz : La Grande Île - Madagascar 🇲🇬</h1>
+
+    <div class="top-bar">
+        <span id="progress">Question 1 / 3</span>
+        <span id="timer">Temps : 15s</span>
+    </div>
+
     <div id="question-container">
-      <p id="question"></p>
-      <div id="answers"></div>
-      <button id="next-button">Suivant</button>
+        <img id="image" src="" alt="" class="hidden">
+        <p id="question"></p>
+        <div id="answers"></div>
+        <button id="next-button">Suivant</button>
     </div>
     <div id="score-container" class="hidden">
-      <h2>Score final : <span id="score"></span>/3</h2>
-      <button onclick="restartQuiz()">Recommencer</button>
+        <h2>Score final : <span id="score"></span>/3</h2>
+        <div id="correction"></div>
+        <button onclick="restartQuiz()">Recommencer</button>
     </div>
   </div>
+
+  <!-- sons -->
+  <audio id="audio-correct" src="correct.mp3"></audio>
+  <audio id="audio-wrong" src="wrong.mp3"></audio>
 
   <script src="script.js"></script>
 </body>
